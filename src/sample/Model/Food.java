@@ -7,6 +7,11 @@ public class Food extends Product implements VendingMachine {
     private String ExpiryDate;
     private String Description;
 
+
+    public Food(){
+
+    }
+
     public Food(String name, int id, int price, String use, String expiryDate, String description) {
         super(name, id, price, use);
         ExpiryDate = expiryDate;
@@ -22,8 +27,18 @@ public class Food extends Product implements VendingMachine {
     }
 
     @Override
-    public void addCurrency(int Amount) {
+    public int addCurrency(int [] Amount) {
 
+        int sum = 0;
+
+        for (int i = 0; i < Amount.length; ++i)
+        {
+            sum += Amount[i];
+        }
+        System.out.println(sum);
+
+
+        return sum;
     }
 
     @Override
@@ -38,11 +53,15 @@ public class Food extends Product implements VendingMachine {
 
     @Override
     public String getDescription(int productName) {
-        return null;
+        return Name;
     }
 
     @Override
-    public int getBalance() {
+    public int getBalance(int Cashpool, int Amount) {
+        if (Cashpool > Amount || Cashpool == Amount){
+            return Cashpool - Amount;
+        }
+
         return 0;
     }
 

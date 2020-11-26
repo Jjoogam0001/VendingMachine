@@ -22,8 +22,9 @@ public class OfficeProducts extends Product implements VendingMachine {
     }
 
     @Override
-    public void addCurrency(int Amount) {
+    public int addCurrency(int[] Amount) {
 
+        return 0;
     }
 
     @Override
@@ -42,7 +43,7 @@ public class OfficeProducts extends Product implements VendingMachine {
     }
 
     @Override
-    public int getBalance() {
+    public int getBalance(int Cashpool, int Amount) {
         return 0;
     }
 

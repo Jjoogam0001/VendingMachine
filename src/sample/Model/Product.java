@@ -6,6 +6,11 @@ public abstract class Product {
     int Price;
     String Use;
 
+
+    public Product(){
+
+        id = 0;
+    }
     public Product(String name, int id, int price, String use) {
         Name = name;
         this.id = id;

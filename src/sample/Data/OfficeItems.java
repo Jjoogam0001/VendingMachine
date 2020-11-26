@@ -12,8 +12,8 @@ public class OfficeItems {
     static {
         officeProducts[0] = new OfficeProducts("Pen",ProductSequence.nextProductId(),15,"Office","Bic","Stationery");
         officeProducts[1] = new OfficeProducts("Pencil",ProductSequence.nextProductId(),10,"Office","Visa","Stationery");
-        officeProducts[2] = new OfficeProducts("NoteBook",ProductSequence.nextProductId(),20,"Office","Ericsson","Stationery");
-        officeProducts[3] = new OfficeProducts("StickNotes",ProductSequence.nextProductId(),10,"Office","Bic","Stationery");
+        officeProducts[2] = new OfficeProducts("Book",ProductSequence.nextProductId(),20,"Office","Ericsson","Stationery");
+        officeProducts[3] = new OfficeProducts("SNotes",ProductSequence.nextProductId(),10,"Office","Bic","Stationery");
     }
 
 
@@ -23,9 +23,9 @@ public class OfficeItems {
     }
 
     public String getOfficeProducts(){
-        for (int i = 0; i< officeProducts.length; i++){
-            return Arrays.toString(new OfficeProducts[]{officeProducts[i]});
-        }
+      if (officeProducts != null){
+          return Arrays.toString(officeProducts);
+      }
         return null;
     }
 

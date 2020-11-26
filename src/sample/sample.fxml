@@ -31,16 +31,68 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Button id="button1" fx:id="button1" layoutX="401.0" layoutY="256.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button2" layoutX="489.0" layoutY="256.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button3" layoutX="401.0" layoutY="296.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button4" layoutX="489.0" layoutY="296.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button5" layoutX="401.0" layoutY="335.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button6" layoutX="489.0" layoutY="335.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button7" layoutX="401.0" layoutY="376.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button8" layoutX="489.0" layoutY="376.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button9" layoutX="401.0" layoutY="421.0" mnemonicParsing="false" text="Button" />
-            <Button fx:id="button10" layoutX="489.0" layoutY="421.0" mnemonicParsing="false" text="Button" />
+            <Button id="button1" fx:id="button1" layoutX="382.0" layoutY="256.0" mnemonicParsing="false" text="1 kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button2" layoutX="449.0" layoutY="256.0" mnemonicParsing="false" text="2 kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button3" layoutX="509.0" layoutY="256.0" mnemonicParsing="false" text="5 Kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button4" layoutX="446.0" layoutY="296.0" mnemonicParsing="false" text="10 kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button5" layoutX="378.0" layoutY="296.0" mnemonicParsing="false" text="20 Kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button6" layoutX="506.0" layoutY="296.0" mnemonicParsing="false" text="50 Kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button7" layoutX="380.0" layoutY="337.0" mnemonicParsing="false" text="100 Kr">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font></Button>
+            <Button fx:id="button8" layoutX="440.0" layoutY="337.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="200 Kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button9" layoutX="500.0" layoutY="337.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="500 kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="button10" layoutX="377.0" layoutY="376.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="1000 Kr">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="Addbutton" layoutX="307.0" layoutY="256.0" mnemonicParsing="false" text="ADD" textFill="#1d2cb5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label fx:id="TotalAmount" layoutX="36.0" layoutY="412.0" prefHeight="19.0" prefWidth="38.0" textFill="#ee1616">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="81.0" layoutY="413.0" prefHeight="17.0" prefWidth="28.0" text="SEK">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="BalanceLabel" layoutX="95.0" layoutY="289.0" prefHeight="70.0" prefWidth="142.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="240.0" layoutY="316.0" text="SEK BALANCE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </children>
