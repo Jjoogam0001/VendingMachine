@@ -28,19 +28,6 @@ public class Drinks extends Product implements VendingMachine {
         return Description;
     }
 
-    @Override
-    public int addCurrency(int [] Amount) {
-        int sum = 0;
-
-        for (int i = 0; i < Amount.length; ++i)
-        {
-            sum += Amount[i];
-        }
-        System.out.println(sum);
-
-
-        return sum;
-    }
 
     @Override
     public Product request(int ProductNumber) {
@@ -57,14 +44,7 @@ public class Drinks extends Product implements VendingMachine {
         return Name;
     }
 
-    @Override
-    public int getBalance(int Cashpool, int Amount) {
-        if (Cashpool > Amount || Cashpool == Amount){
-            return Cashpool - Amount;
-        }
 
-        return 0;
-    }
 
     @Override
     public String[] getProducts() {
