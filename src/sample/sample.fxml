@@ -15,17 +15,20 @@
       <AnchorPane prefHeight="460.0" prefWidth="598.0">
          <children>
             <ListView id="itemList" fx:id="itemList" layoutX="57.0" layoutY="97.0" prefHeight="120.0" prefWidth="484.0" />
-            <Label layoutX="231.0" layoutY="58.0" prefHeight="17.0" prefWidth="136.0" text="Choose Item to Buy">
+            <Label layoutX="212.0" layoutY="33.0" prefHeight="17.0" prefWidth="136.0" text="Choose Item to Buy">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="240.0" layoutY="28.0" prefHeight="19.0" prefWidth="119.0" text="Vending Machine" textFill="#9e0404">
+            <Label layoutX="220.0" layoutY="14.0" prefHeight="19.0" prefWidth="119.0" text="Vending Machine" textFill="#9e0404">
                <font>
                   <Font name="System Bold Italic" size="13.0" />
                </font>
             </Label>
-            <Label id="priceTag" fx:id="priceTag" layoutX="57.0" layoutY="247.0" prefHeight="17.0" prefWidth="76.0" />
+            <Label id="priceTag" fx:id="priceTag" layoutX="242.0" layoutY="393.0" prefHeight="17.0" prefWidth="108.0" text="Available Products">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
             <Label layoutX="433.0" layoutY="230.0" prefHeight="17.0" prefWidth="82.0" text="Insert Money">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -93,6 +96,27 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
+            <TextField fx:id="SearchAreaTextfield" layoutX="59.0" layoutY="65.0" prefHeight="25.0" prefWidth="397.0" promptText="Search Item" />
+            <Button fx:id="SearchButton" layoutX="464.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="SUBMIT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Drinks" layoutX="211.0" layoutY="419.0" mnemonicParsing="false" text="Drinks">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="Foods" layoutX="298.0" layoutY="419.0" mnemonicParsing="false" text="Food">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="officeitembutton" layoutX="363.0" layoutY="419.0" mnemonicParsing="false" text="OfficeItems">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

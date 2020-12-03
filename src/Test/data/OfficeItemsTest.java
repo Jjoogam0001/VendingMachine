@@ -1,11 +1,11 @@
-package Test;
+package Test.data;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import sample.Data.OfficeItems;
 
-import java.util.Arrays;
+
 
 public class OfficeItemsTest {
     OfficeItems officeItems = new OfficeItems();
@@ -17,12 +17,6 @@ public class OfficeItemsTest {
         Assert.assertEquals(expected,actual);
     }
 
-    @Test
-    public void getOfficeProducts() {
-        String expected = Arrays.toString(OfficeItems.officeProducts);
-        String actual = officeItems.getOfficeProducts();
-        Assert.assertEquals(expected,actual);
 
-    }
 
 }

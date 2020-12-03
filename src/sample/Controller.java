@@ -4,14 +4,15 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import sample.Data.DrinkItems;
 import sample.Data.FoodItems;
 import sample.Data.OfficeItems;
 import sample.Model.Drinks;
+import sample.Model.Food;
+
+import javax.swing.*;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
@@ -27,13 +28,11 @@ public class Controller implements Initializable {
    @FXML
    ListView itemList ;
    @FXML
-   Label priceTag;
+   Label priceTag,TotalAmount,BalanceLabel;
    @FXML
-    Button button1,button2,button3,button4,button5,button6,button7,button8,button9,button10;
+    Button button1,button2,button3,button4,button5,button6,button7,button8,button9,button10,SearchButton,Addbutton,Drinks,Foods,officeitembutton;
    @FXML
-   Button Addbutton;
-   @FXML
-   Label TotalAmount,BalanceLabel;
+   TextField SearchAreaTextfield;
 
 
 
@@ -231,8 +230,66 @@ public class Controller implements Initializable {
 
 
 
+
+
             }
         });
+
+        SearchButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                JFrame f;
+                f=new JFrame();
+                Drinks drinks = new Drinks();
+                JOptionPane.showMessageDialog(f,drinks.getDescription(SearchAreaTextfield.getText()));
+
+            }
+        });
+
+        Foods.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                JFrame f;
+                f=new JFrame();
+                for (int i = 0; i <FoodItems.foods.length; i++){
+                    JOptionPane.showMessageDialog(f,FoodItems.foods[i].examine());
+                }
+
+            }
+        });
+
+        Drinks.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                JFrame f;
+                f=new JFrame();
+                for (int i = 0; i <DrinkItems.drinks.length; i++){
+                    JOptionPane.showMessageDialog(f,DrinkItems.drinks[i].examine());
+                }
+
+            }
+        });
+
+        officeitembutton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                JFrame f;
+                f=new JFrame();
+                for (int i = 0; i <OfficeItems.officeProducts.length; i++){
+                    JOptionPane.showMessageDialog(f,OfficeItems.officeProducts[i].examine());
+                }
+
+            }
+        });
+
+
+
+
+
 
 
 

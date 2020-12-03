@@ -1,5 +1,7 @@
 package sample.Model;
 
+import sample.Data.ProductSequence;
+
 public abstract class Product {
     String Name;
     final int id;
@@ -7,15 +9,17 @@ public abstract class Product {
     String Use;
 
 
-    public Product(){
 
-        id = 0;
-    }
-    public Product(String name, int id, int price, String use) {
+    public Product(String name, int price, String use) {
         Name = name;
-        this.id = id;
+        this.id = ProductSequence.nextProductId();
         Price = price;
         Use = use;
+    }
+
+    public Product() {
+
+        id = 0;
     }
 
     public String getName() {

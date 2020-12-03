@@ -1,6 +1,10 @@
 package sample.Model;
 
+import sample.Data.DrinkItems;
+
 import sample.interfaces.VendingMachine;
+
+import java.util.Arrays;
 
 public class Drinks extends Product implements VendingMachine {
 
@@ -10,15 +14,16 @@ public class Drinks extends Product implements VendingMachine {
 
 
 
-    public Drinks(String name, int id, int price, String use, String expiryDate, String description) {
-        super(name, id, price, use);
+    public Drinks(String name, int price, String use, String expiryDate, String description) {
+        super(name, price, use);
         ExpiryDate = expiryDate;
         Description = description;
     }
 
-    public Drinks(){
-
+    public Drinks() {
+        super();
     }
+
 
     public String getExpiryDate() {
         return ExpiryDate;
@@ -31,25 +36,34 @@ public class Drinks extends Product implements VendingMachine {
 
     @Override
     public Product request(int ProductNumber) {
-       return null;
-    }
+        for (int i = 0; i < DrinkItems.drinks.length; i++){
+            if (DrinkItems.drinks[i].id == ProductNumber){
+                return DrinkItems.drinks[i];
+            }
+        }
 
-    @Override
-    public int endSession() {
-        return 0;
-    }
-
-    @Override
-    public String getDescription(int productName) {
-        return Name;
+        return null;
     }
 
 
 
     @Override
-    public String[] getProducts() {
-        return new String[0];
+    public String getDescription(String productName) {
+        for (int i = 0; i < DrinkItems.drinks.length; i++){
+            if (DrinkItems.drinks[i].getName().equals(productName)){
+                return DrinkItems.drinks[i].getDescription() ;
+            }
+        }
+
+        return null;
     }
+
+    @Override
+    public String getProducts() {
+        return Arrays.toString(DrinkItems.drinks);
+    }
+
+
     @Override
     public String examine() {
         return super.examine();

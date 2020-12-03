@@ -1,4 +1,4 @@
-package Test;
+package Test.data;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,16 +18,5 @@ public class DrinkItemsTest {
         Assert.assertEquals(expected,actual);
     }
 
-    @Test
-    public void getDrinks() {
-      String expected = Arrays.toString(DrinkItems.drinks);
-      String actual = drinkItems.getDrinks();
-      Assert.assertEquals(expected,actual);
 
-    }
-
-    @Test
-    public void findbyId() {
-
-    }
 }

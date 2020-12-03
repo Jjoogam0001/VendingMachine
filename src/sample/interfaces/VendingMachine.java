@@ -18,8 +18,14 @@ public interface VendingMachine {
        return sum;
     }
     Product request(int ProductNumber);
-    int endSession();
-    String getDescription(int productName);
+
+    default int endSession(int [] Amount){
+        int reset [] = new int[0];
+         Amount = reset;
+         return Amount.length;
+
+    }
+    String getDescription(String productName);
 
 
 
@@ -30,7 +36,8 @@ public interface VendingMachine {
 
         return 0;
     }
-    String [] getProducts();
+
+    String getProducts();
 
 
 

@@ -12,10 +12,10 @@ public class FoodItems {
     public static Food [] foods = new Food[4];
 
     static {
-        foods[0] = new Food("Burger",ProductSequence.nextProductId(),90,"Edible","12:12:2020","Fast Food");
-        foods[1] = new Food("HotDog",ProductSequence.nextProductId(),70,"Edible","12:11:2020","Street Food");
-        foods[2] = new Food("ChiBox",ProductSequence.nextProductId(),50,"Edible","12:11:2010","Street Food");
-        foods[3] = new Food("Pizza",ProductSequence.nextProductId(),90,"Edible","12:12:2017","Fast Food");
+        foods[0] = new Food("Burger",90,"Edible","12:12:2020","Fast Food");
+        foods[1] = new Food("HotDog",70,"Edible","12:11:2020","Street Food");
+        foods[2] = new Food("ChiBox",50,"Edible","12:11:2010","Street Food");
+        foods[3] = new Food("Pizza",90,"Edible","12:12:2017","Fast Food");
     }
 
 
@@ -24,22 +24,5 @@ public class FoodItems {
         return foods.length;
     }
 
-    public String getFoods(){
-        if (foods != null){
-            return Arrays.toString(foods);
-        }
-        return null;
 
-    }
-
-    public Food findbyId(int id){
-        Food Fd = null;
-        for (int i = 0; i < size(); i++){
-            if (foods[i] .getId() == id ){
-                Fd = foods[i];
-                break;
-            }
-        }
-        return Fd;
-    }
 }
